@@ -1,12 +1,8 @@
 {
   "name": "test-automation-webdriverio",
   "version": "1.0.0",
-  "description": "automated tests",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "webdriverio": "^6.5.2"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "wdio"
   },
@@ -19,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/JoKalna/test-automation-webdriverio/issues"
   },
-  "homepage": "https://github.com/JoKalna/test-automation-webdriverio#readme"
+  "homepage": "https://github.com/JoKalna/test-automation-webdriverio#readme",
+  "dependencies": {
+    "@wdio/cli": "^6.5.2",
+    "webdriverio": "^6.5.2"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^6.5.2",
+    "@wdio/mocha-framework": "^6.5.0",
+    "@wdio/spec-reporter": "^6.4.7",
+    "chromedriver": "^85.0.1",
+    "wdio-chromedriver-service": "^6.0.4"
+  }
 }
