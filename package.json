@@ -1,0 +1,23 @@
+{
+  "name": "test-automation-webdriverio",
+  "version": "1.0.0",
+  "description": "automated tests",
+  "main": "index.js",
+  "dependencies": {
+    "webdriverio": "^6.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoKalna/test-automation-webdriverio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoKalna/test-automation-webdriverio/issues"
+  },
+  "homepage": "https://github.com/JoKalna/test-automation-webdriverio#readme"
+}
