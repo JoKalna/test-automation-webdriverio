@@ -17,14 +17,15 @@
   },
   "homepage": "https://github.com/JoKalna/test-automation-webdriverio#readme",
   "dependencies": {
-    "@wdio/cli": "^6.5.2",
-    "webdriverio": "^6.5.2"
+    "@wdio/cli": "^6.5.2"
   },
   "devDependencies": {
     "@wdio/local-runner": "^6.5.2",
     "@wdio/mocha-framework": "^6.5.0",
     "@wdio/spec-reporter": "^6.4.7",
     "chromedriver": "^85.0.1",
+    "eslint": "^7.11.0",
+    "eslint-plugin-wdio": "^6.6.0",
     "wdio-chromedriver-service": "^6.0.4"
   }
 }
