@@ -129,10 +129,6 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec'],
-
-
-    
-    //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
@@ -172,8 +168,12 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
-    // },
+    beforeSession: function (config) {
+        //time to retry a function
+        process.env['RETRIES'] = process.env['RETRIES'] ? process.env['RETRIES'] : 0;
+        config.baseUrl = 'http://automationpractice.com/index.php';
+
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
