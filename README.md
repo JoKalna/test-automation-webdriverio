@@ -1,11 +1,11 @@
-##About the project
+## About the project
 
 This is a personal project where I am learning how to develop my automation skills using in webdriverIO written in JavaScript.
 This projct will have a suite of [WebDriverIO](https://webdriver.io/) tests. 
 
 Using [Automation Practice Website](http://automationpractice.com/index.php/) to create my tests.
 
-##Pre-req:
+## Pre-req:
 
 You’ll need Node.js installed.
 Install at least v12.16.1 or higher as this is the oldest active LTS version
