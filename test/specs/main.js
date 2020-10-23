@@ -7,5 +7,6 @@ describe('Click contact form', () => {
     const contactUsLink = $(`#contact-link`);
     contactUsLink.click()
     contactUsForm.inputMessage();
+    contactUsForm.subjectHeading();
   });
 });
