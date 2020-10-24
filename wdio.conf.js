@@ -181,10 +181,10 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: () => {
-        // global.expect = chai.expect;
-        // chai.Should();
-        global.expect = chai.expect();
-        chai.Should();
+        require('expect-webdriverio');
+        global.wdioExpect = global.expect;
+        const chai = require('chai');
+        global.expect = chai.expect;
     },
 
     /**

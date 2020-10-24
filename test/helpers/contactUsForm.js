@@ -1,6 +1,6 @@
 module.exports = {
 
-  contactUsForm() {
+  fillContactUsFormandVerify() {
     this.inputMessage();
     this.subjectHeading();
     this.inputEmailAddress();
@@ -31,6 +31,6 @@ module.exports = {
     const sendMessage = $('[id="submitMessage"]');
     sendMessage.click();
     const sucessAlert = $('//div[@class="row"]//div[@id="center_column"]/p[@class="alert alert-success"]').getText();
-//    expect(sucessAlert).to.be.a('Your message has been successfully sent to our team.');
+    expect(sucessAlert).to.equal('Your message has been successfully sent to our team.');
   },
 };
