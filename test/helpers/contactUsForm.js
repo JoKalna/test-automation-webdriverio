@@ -1,23 +1,32 @@
 module.exports = {
-
   fillContactUsFormandVerify() {
+    this.clickContactUsLink();
     this.inputMessage();
     this.subjectHeading();
     this.inputEmailAddress();
     this.inputOrderReference();
     this.sendMessageAndVerify();
   },
+  /* Click on Contact Us Link */
+  clickContactUsLink() {
+    const contactUsLink = $(`#contact-link`);
+    contactUsLink.click();
+  },
+
   /** SEND MESSAGE BODY */
-  inputMessage(){
-    const inputMessage = $('//div[@class="col-xs-12 col-md-9"]//div[@class="form-group"]/textarea');
-    inputMessage.setValue('THIS IS A TEST');
+  inputMessage() {
+    const inputMessage = $(
+      '//div[@class="col-xs-12 col-md-9"]//div[@class="form-group"]/textarea'
+    );
+    inputMessage.setValue("THIS IS A TEST");
   },
 
-  subjectHeading(){
-    const subjectHeading = $('[id="id_contact"]').selectByVisibleText("Customer service");
-
+  subjectHeading() {
+    const subjectHeading = $('[id="id_contact"]').selectByVisibleText(
+      "Customer service"
+    );
   },
-  inputEmailAddress(){
+  inputEmailAddress() {
     const emailAddress = $('[id="email"]');
     emailAddress.setValue("test@test.com");
   },
@@ -27,10 +36,14 @@ module.exports = {
     inputOrderReference.setValue(123456789);
   },
   //Click send and verify the message
-  sendMessageAndVerify(){
+  sendMessageAndVerify() {
     const sendMessage = $('[id="submitMessage"]');
     sendMessage.click();
-    const sucessAlert = $('//div[@class="row"]//div[@id="center_column"]/p[@class="alert alert-success"]').getText();
-    expect(sucessAlert).to.equal('Your message has been successfully sent to our team.');
+    const sucessAlert = $(
+      '//div[@class="row"]//div[@id="center_column"]/p[@class="alert alert-success"]'
+    ).getText();
+    expect(sucessAlert).to.equal(
+      "Your message has been successfully sent to our team."
+    );
   },
 };
