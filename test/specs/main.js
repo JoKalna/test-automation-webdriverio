@@ -10,7 +10,7 @@ describe("Click contact us and fill out the form", () => {
 describe("Search for dress and add to basket", () => {
   it("Search for dress and add to basket to verify", () => {
     browser.url("/index.php");
-    searchTerm.searchTermAndVerify();
+    searchTerm.searchTermAndVerify("dress");
 
     //add to basket on PDP
 

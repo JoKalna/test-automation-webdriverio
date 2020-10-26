@@ -1,14 +1,14 @@
 module.exports = {
-  searchTermAndVerify() {
-    this.searchTerm();
+  searchTermAndVerify(searchterm) {
+    this.searchTerm(searchterm);
     this.clickSearch();
     this.verifySearch();
   },
-  searchTerm() {
+  searchTerm(term) {
     const searchTerm = $(
       '//form[@id="searchbox"]/input[@class="search_query form-control ac_input"]'
     );
-    searchTerm.setValue("dress");
+    searchTerm.setValue([term]);
   },
   clickSearch() {
     const clickSearch = $('//form[@id="searchbox"]/button');
