@@ -2,7 +2,7 @@ module.exports = {
   searchTermAndVerify(searchterm) {
     this.searchTerm(searchterm);
     this.clickSearch();
-    this.verifySearch();
+    this.verifySearchTerm();
   },
   searchTerm(term) {
     const searchTerm = $(
@@ -14,7 +14,7 @@ module.exports = {
     const clickSearch = $('//form[@id="searchbox"]/button');
     clickSearch.click();
   },
-  verifySearch() {
+  verifySearchTerm() {
     const searchTermMatch = $(
       '//div[@id="center_column"]/h1/span[@class="lighter"]'
     ).getText();
