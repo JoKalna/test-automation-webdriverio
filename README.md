@@ -29,6 +29,10 @@ In this project I use husky pre-hooks to run pretty-quick --staged
 
 ## Useful Resources
 
+- https://webdriver.io/
+- https://www.npmjs.com/package/husky
+- https://dev.to/devictoribero/how-to-use-husky-to-create-pre-commit-and-pre-push-hooks-4448
+- https://www.npmjs.com/package/pretty-quick
 - [WebdriverIO](https://webdriver.io/)
 - [Husky](https://www.npmjs.com/package/husky)
 - [Pre-Commit](https://dev.to/devictoribero/how-to-use-husky-to-create-pre-commit-and-pre-push-hooks-4448)

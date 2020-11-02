@@ -1,8 +1,9 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    node: true,
     chai: true,
+    mocha: true,
   },
   plugins: ["wdio"],
   extends: ["plugin:wdio/recommended", "eslint:recommended"],
