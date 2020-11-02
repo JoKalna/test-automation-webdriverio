@@ -4,6 +4,7 @@ module.exports = {
   clickQuickView() {
     const { product } = this.selectRandomProduct();
     product.click();
+    browser.pause(3000);
   },
 
   selectRandomProduct() {
@@ -11,8 +12,6 @@ module.exports = {
     const position = utility.randomPosition(products.length);
     const product = products[position];
     product.scrollIntoView(true);
-    browser.pause(3000);
-    console.log("WHAT POSITION", position);
     return {
       product,
     };
