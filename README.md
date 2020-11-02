@@ -7,6 +7,8 @@ I am using a practice website that has been created for this purpose by communit
 
 I am using mix between CSS selectors and Xpath
 
+I am using [random email](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme) to generate a fake email address.
+
 ## Dependancies
 
 You’ll need Node.js installed.
@@ -38,3 +40,4 @@ In this project I use husky pre-hooks to run pretty-quick --staged
 - [Pre-Commit](https://dev.to/devictoribero/how-to-use-husky-to-create-pre-commit-and-pre-push-hooks-4448)
 - [Pretty-Quick](https://www.npmjs.com/package/pretty-quick)
 - [x-path](https://devhints.io/xpath)
+- [random email generator](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme)
