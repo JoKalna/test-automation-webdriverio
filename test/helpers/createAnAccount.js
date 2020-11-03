@@ -3,13 +3,14 @@ const randomEmailGenerator = require("./randomEmailGenerator");
 module.exports = {
   createAnAccount() {
     this.clickSignIn();
-    this.enterEmailAddress();
+    const enterEmailAddress = this.enterEmailAddress();
     this.createAccountBtn();
     this.titleSelection();
     this.enterFirstName();
     this.enterLastName();
+    this.validateEmailField(enterEmailAddress);
   },
-  /** CLICK SIGN IN SIGN TO REGISTER AND CREATE AN ACCOUNT */
+  /** CLICK SIGN IN LINK TO REGISTER AND CREATE AN ACCOUNT */
   clickSignIn() {
     const clickSignIn = $(
       '//div[@class="nav"]//div[@class="header_user_info"]/a'
@@ -18,10 +19,11 @@ module.exports = {
   },
   enterEmailAddress() {
     const randomEmailAddress = randomEmailGenerator.randomEmailGenerator();
-    console.log("what email", randomEmailAddress);
     const emailAddressField = $('[id="email_create"]');
     emailAddressField.setValue(randomEmailAddress);
     browser.pause(2000);
+    console.log("WHATS INSIDE randomEmailAddress", randomEmailAddress);
+    return randomEmailAddress;
   },
 
   createAccountBtn() {
@@ -40,5 +42,11 @@ module.exports = {
   enterLastName() {
     const lastName = $('[id="customer_lastname"]');
     lastName.setValue("Surname");
+  },
+  validateEmailField(returnEmailAddres) {
+    const validateEmail = $('[id="email"]');
+    const attr = validateEmail.getAttribute("value");
+    console.log("WHATS INSIDE attr : ", attr);
+    expect(returnEmailAddres).to.equal(attr);
   },
 };
