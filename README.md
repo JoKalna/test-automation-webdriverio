@@ -9,6 +9,8 @@ I am using mix between CSS selectors and Xpath
 
 I am using [random email](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme) to generate a fake email address.
 
+I am using [random password generator](https://www.npmjs.com/package/generate-password)
+
 ## Dependancies
 
 You’ll need Node.js installed.
