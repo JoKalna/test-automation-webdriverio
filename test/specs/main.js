@@ -18,7 +18,7 @@ describe("Search for dress and click on quick View", () => {
     productGrid.clickQuickView();
   });
 
-  describe("Register account", () => {
+  describe("Register a new account", () => {
     it("will click sign in and create a new account", () => {
       browser.url("/index.php");
       createAccount.createAnAccount();

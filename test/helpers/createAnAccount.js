@@ -11,6 +11,9 @@ module.exports = {
     this.enterLastName();
     this.validateEmailField(createEmailAddress);
     this.randomPassowrd();
+    this.dateOfBirthDay();
+    this.dateOfBirthMonth();
+    this.dateOfBirthYear();
   },
   /** CLICK SIGN IN LINK TO REGISTER AND CREATE AN ACCOUNT */
   clickSignIn() {
@@ -57,5 +60,18 @@ module.exports = {
     const passwordField = $('[id="passwd"]');
     passwordField.setValue(randomPassword);
     browser.pause(2000);
+  },
+  dateOfBirthDay() {
+    const days = $('[id="days"]');
+    days.selectByAttribute("value", "3");
+  },
+
+  dateOfBirthMonth() {
+    const days = $('[id="months"]');
+    days.selectByAttribute("value", "12");
+  },
+  dateOfBirthYear() {
+    const days = $('[id="years"]');
+    days.selectByAttribute("value", "2000");
   },
 };
