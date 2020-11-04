@@ -7,11 +7,12 @@ I am using a practice website that has been created for this purpose by communit
 
 I am using mix between CSS selectors and Xpath
 
-I am using available npm library for [random email](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme) to generate a fake email address.
+I am using available npm package:
 
-I am using available npm library for [random password generator](https://www.npmjs.com/package/generate-password)
-
-I am using available npm library for [random zip-code generator(US only)](https://www.npmjs.com/package/random-zipcode)
+- [random email](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme) to generate a fake email address.
+- [random password generator](https://www.npmjs.com/package/generate-password)
+- [random zip-code generator(US only)](https://www.npmjs.com/package/random-zipcode)
+- [random mobile generator using faker package](https://www.npmjs.com/package/faker)
 
 ## Dependancies
 

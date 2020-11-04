@@ -22,7 +22,7 @@ describe("Search for dress and click on quick View", () => {
     it("will click sign in and create a new account", () => {
       browser.url("/index.php");
       createAccount.createAnAccount();
-      browser.pause(5000);
+      browser.pause(15000);
     });
   });
 });
