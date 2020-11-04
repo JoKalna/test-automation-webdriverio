@@ -28,6 +28,7 @@
     "chromedriver": "^86.0.0",
     "generate-password": "^1.5.1",
     "random-email": "^1.0.3",
+    "random-zipcode": "^1.0.2",
     "wdio-chromedriver-service": "^6.0.4"
   },
   "devDependencies": {
