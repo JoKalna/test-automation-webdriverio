@@ -4,6 +4,7 @@ const productGrid = require("../helpers/productGrid");
 const quickView = require("../helpers/quickView");
 const createAccount = require("../helpers/createAnAccount");
 const myAccount = require("../helpers/myAccount");
+const signOut = require("../helpers/signOut");
 
 describe("Click contact us and fill out the form", () => {
   it("Fill out contact us form", () => {
@@ -20,10 +21,11 @@ describe("Search for dress and click on quick View", () => {
   });
 
   describe("Register a new account", () => {
-    it("will click sign in and create a new account", () => {
+    it.only("will click sign in and create a new account", () => {
       browser.url("/index.php");
       createAccount.createAnAccount();
-      myAccount.verifyMyAccountTitle();
+      myAccount.verifyMyAccount();
+      signOut.signOut();
     });
   });
 });

@@ -1,5 +1,5 @@
 module.exports = {
-  verifyMyAccountTitle() {
+  verifyMyAccount() {
     const signOut = $(
       '//div[@class="header_user_info"]/a[@class="logout"]'
     ).getText();
