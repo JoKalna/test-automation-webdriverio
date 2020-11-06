@@ -1,30 +1,22 @@
 const contactUsForm = require("../../test/helpers/contactUsForm");
 const searchTerm = require("../../test/helpers/searchTerm");
 const productGrid = require("../helpers/productGrid");
-const quickView = require("../helpers/quickView");
+const pdp = require("../helpers/pdp");
 const createAccount = require("../helpers/createAnAccountandLogIn");
-const myAccount = require("../helpers/myAccount");
-const signOut = require("../helpers/signOut");
-const logIn = require("../helpers/logIn");
 
 describe("Click contact us and fill out the form", () => {
   it("Fill out contact us form", () => {
     browser.url("/index.php");
     contactUsForm.fillContactUsFormandVerify();
   });
-});
 
-describe("Search for dress and click on quick View", () => {
-  it("Search for dress and click on the quick view", () => {
-    browser.url("/index.php");
-    searchTerm.searchTermAndVerify("dress");
-    productGrid.clickQuickView();
-  });
-
-  describe("Register a new account", () => {
-    it.only("will click sign in and create a new account", () => {
+  describe("Register a new account, log in and search for dress and add to basket", () => {
+    it("register account, log in witht he same details and add to basket a dress", () => {
       browser.url("/index.php");
       createAccount.createAccountAndLogIn();
+      searchTerm.searchTermAndVerify("dress");
+      productGrid.clickProduct();
+      pdp.pdp();
       browser.pause(5000);
     });
   });

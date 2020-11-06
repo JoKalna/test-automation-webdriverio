@@ -1,12 +1,10 @@
 const utility = require("./utility");
 
 module.exports = {
-  clickQuickView() {
+  clickProduct() {
     const { product } = this.selectRandomProduct();
-    product.click();
-    browser.pause(3000);
+    product.click({ x: 100 });
   },
-
   selectRandomProduct() {
     const products = this.products();
     const position = utility.randomPosition(products.length);
