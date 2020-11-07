@@ -4,6 +4,7 @@ module.exports = {
     this.enterQuantity();
     this.addToBasket();
     this.getPrice();
+    this.proceedToCheckout();
   },
 
   addToBasket() {
@@ -18,5 +19,10 @@ module.exports = {
     const getPrice = $('[id="our_price_display"]').getText();
     console.log("Whats the price", getPrice);
     return getPrice;
+  },
+  proceedToCheckout() {
+    const goToCheckoutBtn = $("div.button-container > a");
+    goToCheckoutBtn.waitForClickable();
+    goToCheckoutBtn.click();
   },
 };
