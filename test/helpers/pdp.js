@@ -4,6 +4,9 @@ module.exports = {
     this.enterQuantity();
     this.getPrice();
     this.addToBasket();
+    browser.pause(2000);
+    this.preCheckoutTitle();
+    browser.pause(2000);
     this.proceedToCheckout();
   },
 
@@ -18,6 +21,12 @@ module.exports = {
   addToBasket() {
     const addToBasket = $("#add_to_cart > button");
     addToBasket.click();
+  },
+
+  preCheckoutTitle() {
+    const title = $("#layer_cart_product_title");
+    title.getText();
+    return title;
   },
 
   proceedToCheckout() {
