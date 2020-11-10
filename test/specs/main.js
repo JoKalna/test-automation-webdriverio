@@ -11,13 +11,14 @@ describe("Click contact us and fill out the form", () => {
   });
 
   describe("Register a new account, log in and search for dress and add to basket", () => {
-    it("register account, log in witht he same details and add to basket a dress", () => {
+    it.only("register account, log in witht he same details and add to basket a dress", () => {
       browser.url("/index.php");
-      createAccount.createAccountAndLogIn();
+      wdioExpect(browser.$("#block_top_menu")).toBeDisplayed(); // expect-webdriverio assertion
+      //   createAccount.createAccountAndLogIn();
       searchTerm.searchTermAndVerify("dress");
       productGrid.clickProduct();
+      browser.pause(2000);
       goToPdp.pdp();
-      browser.pause(5000);
     });
   });
 });
