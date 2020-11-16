@@ -14,8 +14,8 @@ describe("Click contact us and fill out the form", () => {
   describe("Register a new account, log in and search for dress and add to basket", () => {
     it.only("register account, log in witht he same details and add to basket a dress", () => {
       browser.url("/index.php");
-      //     const accountDetails = createAccount.createAccount();
-      //    logIn.logIntoAccount(accountDetails);
+      const accountDetails = createAccount.createAccount();
+      logIn.logIntoAccount(accountDetails);
       searchTerm.searchTermAndVerify("dress");
       productGrid.clickProduct();
       const pdpPrice = goToPdp.pdp();

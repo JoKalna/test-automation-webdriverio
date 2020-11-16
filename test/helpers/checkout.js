@@ -13,7 +13,7 @@ module.exports = {
   //   return productTitle;
   // },
   checkoutSummaryPrice() {
-    browser.pause(5000);
+    browser.pause(3000);
     const checkoutPrice = $("#total_product");
     const price = checkoutPrice.getText();
     return price;
