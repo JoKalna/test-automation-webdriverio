@@ -1,13 +1,14 @@
 const productGrid = require("./productGrid");
 module.exports = {
   pdp() {
+    const pdpPrice = this.getPrice();
     this.enterQuantity();
-    this.getPrice();
     this.addToBasket();
     browser.pause(2000);
-    this.preCheckoutTitle();
-    browser.pause(2000);
+    this.pdpTitle();
     this.proceedToCheckout();
+    browser.pause(2000);
+    return pdpPrice;
   },
 
   enterQuantity() {
@@ -15,18 +16,25 @@ module.exports = {
     quantityField.setValue("2");
   },
   getPrice() {
-    const getPrice = $('[id="our_price_display"]').getText();
-    return getPrice;
+    //  const getPrice = $('#our_price_display').getText();
+    browser.pause(5000);
+    const priceElement = $(
+      '//div[@id="center_column"]//div[@class="primary_block row"]//form[@id="buy_block"]//div[@class="box-info-product"]//div[@class="price"]//span[@id="our_price_display"]'
+    );
+    const price = priceElement.getText();
+    console.log("whats inside pdp.js", price);
+    return price;
   },
   addToBasket() {
     const addToBasket = $("#add_to_cart > button");
     addToBasket.click();
   },
 
-  preCheckoutTitle() {
-    const title = $("#layer_cart_product_title");
-    title.getText();
-    return title;
+  pdpTitle() {
+    const pdpTitle = $("#layer_cart_product_title");
+    pdpTitle.getText();
+    console.log("whats inside pdp pdpTitle");
+    return pdpTitle;
   },
 
   proceedToCheckout() {

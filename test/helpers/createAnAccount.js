@@ -4,7 +4,7 @@ const randomPostcodeGenerator = require("./randomPostcodeGenerator.js");
 const randomMobileNumber = require("./randomGeneratedMobileNr");
 
 module.exports = {
-  createAccountAndLogIn() {
+  createAccount() {
     this.clickSignIn();
     const createEmailAddress = this.enterEmailAddress();
     this.createAccountBtn();
@@ -24,10 +24,10 @@ module.exports = {
     this.submitRegistrationForm();
     this.verifyMyAccount();
     this.signOut();
-    this.logIn(createEmailAddress);
-    this.logInPassword(pswLogIn);
-    this.logInButton();
+
+    return { createEmailAddress: createEmailAddress, pswLogIn: pswLogIn };
   },
+
   /** CLICK SIGN IN LINK TO REGISTER AND CREATE AN ACCOUNT */
   clickSignIn() {
     const clickSignIn = $(
@@ -129,21 +129,19 @@ module.exports = {
 
   /* Log back in using the same details */
 
-  logIn(existingEmail) {
-    const logInEmail = existingEmail;
-    const emailField = $('[id="email"]');
-    emailField.setValue(logInEmail);
-    return logInEmail;
-  },
-
-  logInPassword(existingPsw) {
-    const loginPassword = existingPsw;
-    const passwordField = $('[id="passwd"]');
-    passwordField.setValue(loginPassword);
-    return loginPassword;
-  },
-  logInButton() {
-    const logInBtn = $('[id="SubmitLogin"]');
-    logInBtn.click();
-  },
+  // logIn(existingEmail) {
+  //   const logInEmail = existingEmail;
+  //   const emailField = $('[id="email"]');
+  //   emailField.setValue(logInEmail);
+  // },
+  //
+  // logInPassword(existingPsw) {
+  //   const loginPassword = existingPsw;
+  //   const passwordField = $('[id="passwd"]');
+  //   passwordField.setValue(loginPassword);
+  // },
+  // logInButton() {
+  //   const logInBtn = $('[id="SubmitLogin"]');
+  //   logInBtn.click();
+  // },
 };
