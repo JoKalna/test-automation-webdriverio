@@ -25,6 +25,7 @@ module.exports = {
     this.verifyMyAccount();
     this.signOut();
 
+    //returning objects of assigned values
     return { createEmailAddress: createEmailAddress, pswLogIn: pswLogIn };
   },
 
@@ -114,34 +115,15 @@ module.exports = {
     const regButton = $('[id="submitAccount"]');
     regButton.click();
   },
-
-  signOut() {
-    const signOut = $(
-      '//div[@class="header_user_info"]/a[@class="logout"]'
-    ).click();
-  },
   verifyMyAccount() {
     const signOut = $(
       '//div[@class="header_user_info"]/a[@class="logout"]'
     ).getText();
     expect(signOut).to.equal("Sign out");
   },
-
-  /* Log back in using the same details */
-
-  // logIn(existingEmail) {
-  //   const logInEmail = existingEmail;
-  //   const emailField = $('[id="email"]');
-  //   emailField.setValue(logInEmail);
-  // },
-  //
-  // logInPassword(existingPsw) {
-  //   const loginPassword = existingPsw;
-  //   const passwordField = $('[id="passwd"]');
-  //   passwordField.setValue(loginPassword);
-  // },
-  // logInButton() {
-  //   const logInBtn = $('[id="SubmitLogin"]');
-  //   logInBtn.click();
-  // },
+  signOut() {
+    const signOut = $(
+      '//div[@class="header_user_info"]/a[@class="logout"]'
+    ).click();
+  },
 };

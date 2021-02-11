@@ -19,7 +19,7 @@ describe("Click contact us and fill out the form", () => {
       searchTerm.searchTermAndVerify("dress");
       productGrid.clickProduct();
       const pdpPrice = goToPdp.pdp();
-      checkout.shoppingChartSummary(pdpPrice);
+      // checkout.shoppingChartSummary(pdpPrice);
     });
   });
 });
