@@ -5,14 +5,14 @@ const goToPdp = require("../helpers/pdp");
 const createAccount = require("../helpers/createAnAccount");
 const checkout = require("../helpers/checkout");
 const logIn = require("../helpers/logIn");
-describe("Click contact us and fill out the form", () => {
+describe.skip("AUTOMATION PRACTICE WEBSITE - Click contact us and fill out the form", () => {
   it("Fill out contact us form", () => {
     browser.url("/index.php");
     contactUsForm.fillContactUsFormandVerify();
   });
 
   describe("Register a new account, log in and search for dress and add to basket", () => {
-    it.only("register account, log in witht he same details and add to basket a dress", () => {
+    it.skip("register account, log in witht he same details and add to basket a dress", () => {
       browser.url("/index.php");
       const accountDetails = createAccount.createAccount();
       logIn.logIntoAccount(accountDetails);
@@ -23,3 +23,13 @@ describe("Click contact us and fill out the form", () => {
     });
   });
 });
+
+describe("Sauce lab - practice"),
+  () => {
+    describe("Register for sauce lab", () => {
+      it.only("Log in page for Saue lab", () => {
+        browser.url("");
+        browser.pause(2000);
+      });
+    });
+  };

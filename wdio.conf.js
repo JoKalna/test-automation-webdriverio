@@ -89,7 +89,7 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: "http://automationpractice.com",
+  //baseUrl: "http://automationpractice.com",
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
@@ -171,8 +171,18 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
-  // beforeSession: function (config, capabilities, specs) {
-  // },
+  beforeSession: function (config, capabilities, specs) {
+    process.env["RETRIES"] = process.env["RETRIES"]
+      ? process.env["RETRIES"]
+      : 0;
+    switch (process.env["ENV"]) {
+      case "automationpractice":
+        config.baseUrl = 'http://automationpractice.com"';
+        break;
+      default:
+        config.baseUrl = "https://www.saucedemo.com/";
+    }
+  },
   /**
    * Gets executed before test execution begins. At this point you can access to all global
    * variables like `browser`. It is the perfect place to define custom commands.
