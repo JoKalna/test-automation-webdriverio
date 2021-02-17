@@ -24,7 +24,7 @@ If you don't have Node installed, recommend installing NVM to assist managing mu
 
 ## Run tests local
 
-use npx wdio
+use npm run dev
 
 ## Using eslint
 

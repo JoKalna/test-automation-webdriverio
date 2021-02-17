@@ -1,11 +1,21 @@
-const contactUsForm = require("../../test/helpers/contactUsForm");
-const searchTerm = require("../../test/helpers/searchTerm");
-const productGrid = require("../helpers/productGrid");
-const goToPdp = require("../helpers/pdp");
-const createAccount = require("../helpers/createAnAccount");
-const checkout = require("../helpers/checkout");
-const logIn = require("../helpers/logIn");
+const contactUsForm = require("../helpers/autopractice/contactUsForm");
+const searchTerm = require("../helpers/autopractice/searchTerm");
+const productGrid = require("../helpers/autopractice/productGrid");
+const goToPdp = require("../helpers/autopractice/pdp");
+const createAccount = require("../helpers/autopractice/createAnAccount");
+const checkout = require("../helpers/autopractice/checkout");
+const logIn = require("../helpers/autopractice/logIn");
 const scenarios = require("../helpers/scenarios");
+
+describe("Sauce lab - practice", function () {
+  //retry the test if uncesseful. defined in wdio.conf.js
+  this.retries(process.env.RETRIES);
+  it("Log in page for Sauce lab", function () {
+    scenarios.logIn({
+      url: "",
+    });
+  });
+});
 
 describe("AUTOMATION PRACTICE WEBSITE - Click contact us and fill out the form", () => {
   it("Fill out contact us form", () => {
@@ -22,14 +32,6 @@ describe("AUTOMATION PRACTICE WEBSITE - Click contact us and fill out the form",
       productGrid.clickProduct();
       const pdpPrice = goToPdp.pdp();
       // checkout.shoppingChartSummary(pdpPrice);
-    });
-  });
-});
-
-describe("Sauce lab - practice", function () {
-  it.only("Log in page for Sauce lab", function () {
-    scenarios.logIn({
-      url: "/inventory.html",
     });
   });
 });
