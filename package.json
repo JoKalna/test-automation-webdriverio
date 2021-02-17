@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": ".eslintrc.js",
   "scripts": {
-    "dev": "ENV=int ./test/specs/main.js",
+    "dev": "ENV=saucedemo ./test/specs/main.js",
     "autopractice": "ENV=automationpractice ./test/specs.main.js",
     "pretty-quick": "pretty-quick"
   },
