@@ -4,7 +4,7 @@
   "main": ".eslintrc.js",
   "scripts": {
     "dev": "ENV=saucedemo npx wdio --spec ./test/specs/main.js",
-    "autopractice": "ENV=automationpractice npx wdio --spec ./test/specs/main.js",
+    "autopractice": "ENV=automationpractice npx wdio --spec ./test/specs/autopractice.js",
     "pretty-quick": "pretty-quick"
   },
   "repository": {
