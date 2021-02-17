@@ -17,7 +17,7 @@ describe("Sauce lab - practice", function () {
   });
 });
 
-describe("AUTOMATION PRACTICE WEBSITE - Click contact us and fill out the form", () => {
+describe.skip("AUTOMATION PRACTICE WEBSITE - Click contact us and fill out the form", () => {
   it("Fill out contact us form", () => {
     browser.url("/index.php");
     contactUsForm.fillContactUsFormandVerify();
