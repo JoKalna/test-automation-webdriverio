@@ -8,4 +8,10 @@ describe("Sauce lab - practice", function () {
       url: "",
     });
   });
+  it("Verify items on inventory page", function () {
+    scenarios.inventory({
+      url: "/inventory.html",
+    });
+    browser.pause(5000);
+  });
 });

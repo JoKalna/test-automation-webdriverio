@@ -57,6 +57,9 @@ exports.config = {
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
       // excludeDriverLogs: ['bugreport', 'server'],
     },
+    //   {
+    //  //   browserName: "safari",
+    //   },
   ],
   //
   // ===================
@@ -194,6 +197,8 @@ exports.config = {
     global.wdioExpect = global.expect;
     const chai = require("chai");
     global.expect = chai.expect;
+    chai.Should();
+    global.assert = chai.assert;
   },
 
   /**
