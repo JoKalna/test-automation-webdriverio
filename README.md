@@ -40,6 +40,6 @@ In this project I use husky pre-hooks to run pretty-quick --staged
 - [Using the latest WebdriverIO - v7](https://webdriver.io/)
 - [Husky](https://www.npmjs.com/package/husky)
 - [Pre-Commit](https://dev.to/devictoribero/how-to-use-husky-to-create-pre-commit-and-pre-push-hooks-4448)
-- [Pretty-Quick](https://www.npmjs.com/package/pretty-quick)
+- [Pretty-Quick](https://www.npmjs.com/package/pretty-quick) - A simple git hook for only staged files — files that you changed for your commit.
 - [x-path](https://devhints.io/xpath)
 - [random email generator](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme)

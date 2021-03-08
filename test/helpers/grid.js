@@ -66,11 +66,10 @@ module.exports = {
   },
 
   //elements:
-
   productsOnGrid() {
     browser.waitUntil(() => {
       /*we are waiting for a state here to be returned. 
-      //in this case its lenght of 6 elements. 
+      in this case its lenght of 6 elements. 
       after we continue to the next which is returning the elements in the product grid
       */
       return $$("div.inventory_list > div").length == 6;
