@@ -3,7 +3,7 @@ module.exports = {
     es2020: true,
     browser: true,
     node: true,
-    chai: true,
+    //chai: true,
     mocha: true,
   },
   plugins: ["wdio"],

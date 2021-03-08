@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "ENV=saucedemo npx wdio --spec ./test/specs/main.js",
     "autopractice": "ENV=automationpractice npx wdio --spec ./test/specs/autopractice.js",
+    "eslint": "eslint test/",
     "pretty-quick": "pretty-quick",
     "lint": "prettier --check .",
     "format": "prettier --write ."
