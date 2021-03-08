@@ -1,6 +1,7 @@
 const utility = require("./utility");
 module.exports = {
   verifyProductTitle() {
+    //array of existing products to help to verify
     const productTitleName = JSON.stringify([
       "Sauce Labs Backpack",
       "Sauce Labs Bike Light",
@@ -9,27 +10,30 @@ module.exports = {
       "Sauce Labs Onesie",
       "Test.allTheThings() T-Shirt (Red)",
     ]);
+    /* 
+    Assertions -  trying out expect, chai deep equal.
+    Assert - trying out using chai assert.      
+    */
 
     expect(productTitleName).to.eql(
       this.productTitles(),
       "There is a incorrect title in our data"
     );
-
-    //this works but if it fails, it does not give a very good reason "where it failed"
-    //just says array6 does not match array 6.
-    // https://www.chaijs.com/plugins/chai-fuzzy/  - check out for jsonstringify
-    // const productTitle = this.productTitles();
-    // assert(
-    //   productTitleName === true,
-    //   productTitle === true,
-    //   `productTitleName did not contain the correct details. Expected details: '${JSON.stringify(productTitleName)}'. productTitle: '${productTitle}'.`
-    // );
+    //we are asserting that prodTitle array matches the ProductsOnGrid elements.
+    const prodTitle = this.productTitles();
+    assert(
+      prodTitle == productTitleName,
+      `productTitleName did not contain the correct details. Expected details: '${JSON.stringify(
+        prodTitle
+      )}'. productTitle: '${prodTitle}'.`
+    );
   },
 
   productTitles() {
-    //slice 6 to only get the title and map will include all 6 on the product grid
-    //Below Code returns:
-    /*[
+    /* 
+   Slice 6 to only get the title and map will include all 6 on the product grid
+   Below Code returns:
+   [
 'Sauce Labs Backpack',
 'Sauce Labs Bike Light',
 'Sauce Labs Bolt T-Shirt',
@@ -62,7 +66,15 @@ module.exports = {
   },
 
   //elements:
+
   productsOnGrid() {
+    browser.waitUntil(() => {
+      /*we are waiting for a state here to be returned. 
+      //in this case its lenght of 6 elements. 
+      after we continue to the next which is returning the elements in the product grid
+      */
+      return $$("div.inventory_list > div").length == 6;
+    });
     return $$("div.inventory_list > div");
   },
 };

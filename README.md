@@ -1,15 +1,16 @@
 ## Automated tests written in JavaScript using webdriverIO as framework
 
 This project is set up to help me practice to write automated tests.
-I am using a practice website that has been created for this purpose by community members :
-[Practice Website](http://automationpractice.com/index.php) and source code can be found here
-[GIT](https://github.com/StMarco89/automationpractice.com)
+I am using a practice website that has been created for this purpose by community members:
+
+- [Sauce Lab Practice website](https://www.saucedemo.com/)
+- [Practice Website](http://automationpractice.com/index.php) and source code can be found here
+  [GIT](https://github.com/StMarco89/automationpractice.com)
 
 I am using mix between CSS selectors and Xpath
-
 I am using available npm package:
 
-- [random email](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme) to generate a fake email address.
+- [random email](https://www.npmjs.com/package/random-email/v/1.0.3?activeTab=readme)
 - [random password generator](https://www.npmjs.com/package/generate-password)
 - [random zip-code generator(US only)](https://www.npmjs.com/package/random-zipcode)
 - [random mobile generator using faker package](https://www.npmjs.com/package/faker)
@@ -36,7 +37,7 @@ In this project I use husky pre-hooks to run pretty-quick --staged
 
 ## Useful Resources
 
-- [WebdriverIO](https://webdriver.io/)
+- [Using the latest WebdriverIO - v7](https://webdriver.io/)
 - [Husky](https://www.npmjs.com/package/husky)
 - [Pre-Commit](https://dev.to/devictoribero/how-to-use-husky-to-create-pre-commit-and-pre-push-hooks-4448)
 - [Pretty-Quick](https://www.npmjs.com/package/pretty-quick)
