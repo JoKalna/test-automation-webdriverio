@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "ENV=saucedemo npx wdio --spec ./test/specs/main.js",
     "autopractice": "ENV=automationpractice npx wdio --spec ./test/specs/autopractice.js",
+    "--------- LINT ----------------------": "",
     "eslint": "eslint test/",
     "pretty-quick": "pretty-quick",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "--------- HELPERS ----------------------": "",
+    "nuke": "yarn cache clean && yarn global add rimraf && rimraf node_modules && rimraf build && yarn"
   },
   "repository": {
     "type": "git",

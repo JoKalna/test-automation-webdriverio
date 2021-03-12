@@ -3,7 +3,7 @@ const searchTerm = require("../helpers/autopractice/searchTerm");
 const productGrid = require("../helpers/autopractice/productGrid");
 const goToPdp = require("../helpers/autopractice/pdp");
 const createAccount = require("../helpers/autopractice/createAnAccount");
-const checkout = require("../helpers/autopractice/checkout");
+//const checkout = require("../helpers/autopractice/checkout");
 const logIn = require("../helpers/autopractice/logIn");
 
 describe("AUTOMATION PRACTICE WEBSITE - Click contact us and fill out the form", () => {

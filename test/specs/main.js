@@ -8,9 +8,15 @@ describe("Sauce lab - practice", function () {
       url: "",
     });
   });
-  it("Verify items on inventory page", function () {
+  it.skip("Verify items on inventory page", function () {
     scenarios.inventory({
       url: "/inventory.html",
+    });
+  });
+  it("Sort Z-A", function () {
+    scenarios.sort({
+      url: "/inventory.html",
+      sortBy: "za",
     });
     browser.pause(5000);
   });
