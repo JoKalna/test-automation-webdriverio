@@ -3,7 +3,7 @@ module.exports = {
     this.logIntoAccountUserName();
     this.logIntoAccountPassword();
     this.signIn();
-    this.verifyLogInPage();
+    //   this.verifyLogInPage();
   },
 
   logIntoAccountUserName() {
@@ -19,8 +19,8 @@ module.exports = {
     const signInButton = $("#login-button");
     signInButton.click();
   },
-  verifyLogInPage() {
-    const productTitle = $("#inventory_filter_container > div").getText();
-    expect(productTitle).to.equal("Products");
-  },
+  // verifyLogInPage() {
+  //   const productTitle = $("#inventory_filter_container > div").getText();
+  //   expect(productTitle).to.equal("Products");
+  // },
 };

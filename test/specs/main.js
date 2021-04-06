@@ -13,10 +13,16 @@ describe("Sauce lab - practice", function () {
       url: "/inventory.html",
     });
   });
-  it("Sort Z-A", function () {
+  it.skip("Sort Z-A", function () {
     scenarios.sort({
       url: "/inventory.html",
+      // sortBy key needs to match scenario line 17 e.g data[sortBy]
       sortBy: "za",
+    });
+  });
+  it("Add to basket", function () {
+    scenarios.atb({
+      url: "/inventory.html",
     });
     browser.pause(5000);
   });
